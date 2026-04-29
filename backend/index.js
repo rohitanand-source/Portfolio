@@ -31,29 +31,34 @@ app.post("/api/contact", async (req, res) => {
     const newMessage = new Message({ name, email, message });
     await newMessage.save();
 
-      // 2. Send Email
-      // const transporter = nodemailer.createTransport({
-      // service: "gmail",
-      // auth: {
-      //   user: process.env.EMAIL_USER,
-      //   pass: process.env.EMAIL_PASS,
-      // },
-      // });
+    // 2) Email (only if enabled)
+    if (process.env.ENABLE_EMAIL === "true") {
+      try {
+        const transporter = nodemailer.createTransport({
+          service: "gmail",
+          auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+          },
+        });
 
-      // await transporter.sendMail({
-      // from: email,
-      // to: process.env.EMAIL_USER,
-      // subject: `New Message from ${name}`,
-      // text: `
-      // Name: ${name}
-      // Email: ${email}
-      // Message: ${message}
-      // `,
-      // });
+        await transporter.sendMail({
+          from: email,
+          to: process.env.EMAIL_USER,
+          subject: `New Message from ${name}`,
+          text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        });
+      } catch (err) {
+        console.log("Email failed:", err.message);
+        // ❗ email fail hone par bhi API fail mat karo
+      }
+    }
 
+    // 3) Always success (DB ho gaya)
     res.status(200).json({ success: true });
+
   } catch (error) {
-    console.log("Error:",error);
-    res.status(500).json({ success: false, error:error.message });
+    console.log("ERROR:", error);
+    res.status(500).json({ success: false });
   }
 });
