@@ -40,16 +40,16 @@ app.post("/api/contact", async (req, res) => {
       },
       });
 
-      await transporter.sendMail({
-      from: email,
-      to: process.env.EMAIL_USER,
-      subject: `New Message from ${name}`,
-      text: `
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}
-      `,
-      });
+      // await transporter.sendMail({
+      // from: email,
+      // to: process.env.EMAIL_USER,
+      // subject: `New Message from ${name}`,
+      // text: `
+      // Name: ${name}
+      // Email: ${email}
+      // Message: ${message}
+      // `,
+      // });
 
     res.status(200).json({ success: true });
   } catch (error) {
