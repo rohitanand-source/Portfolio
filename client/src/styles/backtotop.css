@@ -1,0 +1,39 @@
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #6366f1, #22c55e);
+  color: white;
+  font-size: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: all 0.3s ease;
+}
+
+/* Show animation */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Hover effect */
+.back-to-top:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6);
+}

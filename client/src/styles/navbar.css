@@ -1,0 +1,79 @@
+/* Navbar container */
+.navbar {
+  position:absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+
+  color: white;
+  z-index: 1000;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo */
+.logo {
+  font-size: 30px;
+  font-weight:bolder;
+  color: #38bdf8;
+  letter-spacing: 1px;
+  color: var(--primary);
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: left 30px;;  
+  align-items:center;
+}
+
+/* Remove ugly blue links */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background: #38bdf8;
+  transition: 0.3s;
+  background: var(--primary);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Theme button */
+.theme-btn {
+  background: #38bdf8;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-btn:hover {
+  background: #0ea5e9;
+}
+

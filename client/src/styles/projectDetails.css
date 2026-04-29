@@ -1,0 +1,27 @@
+.project-details {
+  padding: 80px 50px;
+  color: white;
+}
+
+.project-details img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.project-details ul {
+  margin: 15px 0;
+}
+
+.tech span {
+  background: #1e293b;
+  padding: 6px 10px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.links a {
+  margin-right: 15px;
+  color: #6366f1;
+}

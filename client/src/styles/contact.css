@@ -1,0 +1,44 @@
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #1e293b;
+  color: white;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+/* Success */
+.success-msg {
+  color: #22c55e;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Error */
+.error-msg {
+  color: #ef4444;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Disabled button */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

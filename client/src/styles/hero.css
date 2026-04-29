@@ -1,0 +1,109 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  padding: 0 80px;
+
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* LEFT */
+.hero-left {
+  max-width: 600px;
+}
+
+/* RIGHT */
+.hero-right {
+  position: relative;
+}
+
+/* Heading */
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.hero-right img {
+  width: 300px;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Glow effect behind image */
+.hero-right::before {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: linear-gradient(45deg, #6366f1, #22c55e);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: 1;
+}
+/* Gradient Name */
+.gradient-text {
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Typing text */
+.hero h2 {
+  font-size: 28px;
+  margin: 15px 0;
+  color: #38bdf8;
+}
+
+/* Description */
+.hero p {
+  max-width: 500px;
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* Buttons */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+/* Primary button */
+.btn.primary {
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  color: white;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+}
+
+/* Secondary button */
+.btn.secondary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn.secondary:hover {
+  background: #38bdf8;
+  color: black;
+}
