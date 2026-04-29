@@ -6,8 +6,8 @@ A passionate **Full Stack Developer** who loves building modern and scalable web
 ---
 
 ## 🌐 Live Demo
-👉 [Live Website](#)  
-👉 [Backend API](#)
+👉 [https://rohitanand25portfolio.netlify.app/](#)  
+👉 [https://portfolio-backend-fa25.onrender.com](#)
 
 ---
 
