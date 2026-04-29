@@ -20,10 +20,10 @@ function Footer() {
         </div>
 
         <div className="social-icons">
-          <a href="https://github.com/rohitanand-source">GitHub</a>
-          <a href="www.linkedin.com/in/rohitanand8431">LinkedIn</a>
-          <a href="https://www.instagram.com/_rohit__anand__?igsh=djdmdzlyZWg5aW50">Instagram</a>
-          <a href="https://www.youtube.com/@AnandSharma25-g2r">YouTube</a>
+          <a href="https://github.com/rohitanand-source" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/rohitanand8431/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/_rohit__anand__?igsh=djdmdzlyZWg5aW50" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@AnandSharma25-g2r" target="_blank" rel="noopener">YouTube</a>
         </div>
 
         <p className="copyright">

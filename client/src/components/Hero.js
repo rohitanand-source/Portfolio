@@ -10,7 +10,7 @@ function Hero() {
         {/* LEFT SIDE */}
         <div className="hero-left">
           <h1>
-            Hi, I'm <span className="gradient-text">Anand</span> 👋
+            Hi, I'm <span className="gradient-text">R. Anand</span> 👋
           </h1>
 
           <h2>
@@ -32,8 +32,8 @@ function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn primary">View Projects</button>
-            <button className="btn secondary">Contact Me</button>
+              <a href="#projects"><button className="btn primary">View Projects</button></a>
+              <a href="#contact"><button className="btn secondary">Contact Me</button></a>
             <a href="/resume.pdf" download><button className="btn secondary">Download Resume</button></a>
           </div>
         </div>
