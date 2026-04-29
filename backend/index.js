@@ -53,7 +53,7 @@ app.post("/api/contact", async (req, res) => {
 
     res.status(200).json({ success: true });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ success: false });
+    console.log("Error:",error);
+    res.status(500).json({ success: false, error:error.message });
   }
 });
