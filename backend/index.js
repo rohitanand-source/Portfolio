@@ -2,7 +2,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const Message = require("./models/Message");
-const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
@@ -33,10 +32,10 @@ app.post("/api/contact", async (req, res) => {
 
 
     // 3) Always success (DB ho gaya)
-    return res.status(200).json({ success: true });
+    res.status(200).json({ success: true });
 
   } catch (error) {
     console.log("ERROR:", error);
-    return res.status(500).json({ success: false });
+    res.status(500).json({ success: false });
   }
 });
